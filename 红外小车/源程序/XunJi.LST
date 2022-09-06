@@ -1,0 +1,62 @@
+C51 COMPILER V9.00   XUNJI                                                                 12/26/2021 11:17:14 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE XUNJI
+OBJECT MODULE PLACED IN XunJi.OBJ
+COMPILER INVOKED BY: d:\KeilForC51PRO\C51\BIN\C51.EXE XunJi.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include"BiZhang.h"
+   2          
+   3          void XunJi()
+   4          {       
+   5   1              if(zuofang==1&&youfang==1)
+   6   1              {
+   7   2                      Go_Stop();
+   8   2                      Delay_s(20);
+   9   2              }
+  10   1              if(zuofang==0&&youfang==0&&bi_zhang!=0)
+  11   1              {
+  12   2                      Go_Up();
+  13   2              }
+  14   1              if(zuofang==1&&youfang==0)
+  15   1              {
+  16   2                      if(zuofang==1&&youfang==1)
+  17   2                      {
+  18   3                      Go_Stop();
+  19   3                      Delay_s(20);
+  20   3                      }
+  21   2                      Go_Down();
+  22   2                      Delay_s(30);
+  23   2                      Turn_Left();
+  24   2                      Delay_s(120);
+  25   2              }
+  26   1              if(zuofang==0&&youfang==1)
+  27   1              {
+  28   2                      Go_Down();
+  29   2                      Delay_s(30);
+  30   2                      if(zuofang==1&&youfang==1)
+  31   2                      {
+  32   3                      Go_Stop();
+  33   3                      Delay_s(20);
+  34   3                      }
+  35   2                      Turn_Right();
+  36   2                      Delay_s(120);
+  37   2              }
+  38   1      
+  39   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    113    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

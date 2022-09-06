@@ -1,0 +1,49 @@
+C51 COMPILER V9.00   MAIN                                                                  12/26/2021 11:17:14 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: d:\KeilForC51PRO\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include"motor.h"
+   3          #include"BiZhang.h"
+   4          #include"Uart.h"
+   5          
+   6          
+   7          void main()
+   8          {
+   9   1              UART_init();
+  10   1              while(1)
+  11   1              {       
+  12   2                      if(bi_zhang!=0)
+  13   2                      {
+  14   3                              XunJi();
+  15   3                      }
+  16   2                      else if(bi_zhang==0 && revbuf!='q')
+  17   2                      {
+  18   3                              Go_Stop();
+  19   3                              while(revbuf!='q')
+  20   3                              {
+  21   4                                      Bluetooth();
+  22   4                              }
+  23   3                      }
+  24   2              }
+  25   1      }
+  26          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     34    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

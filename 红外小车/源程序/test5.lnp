@@ -1,0 +1,8 @@
+"STARTUP.obj",
+"XunJi.obj",
+"Delay.obj",
+"main.obj",
+"motor.obj",
+"Uart.obj" 
+TO "test5" 
+RAMSIZE(256) 
